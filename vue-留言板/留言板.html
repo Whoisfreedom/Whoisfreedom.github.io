@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>留言板</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link href="lib/css/bootstrap.min.css" rel="stylesheet" >
+<script type="text/javascript" src="lib/js/vue.js"></script>
+<script type="text/javascript" src="lib/js/jquery-1.7.2.js"></script>
+<script type="text/javascript" src="lib/js/bootstrap.js"></script>
+
+<script type="text/javascript">
+	window.onload=function(){
+		var vm = new Vue({
+			el:'#box',
+			data:{
+				myData:[],
+				infomation:{
+					name:'',
+					age:''
+				},
+				nowIndex:-100
+			},
+			methods:{
+				add:function(ev){
+					ev.preventDefault();
+					this.myData.push(this.infomation);
+					this.infomation={
+						name:'',
+						age:''
+					}
+				},
+				change:function(index){
+					this.nowIndex=index;
+				},
+				del:function(index){
+					if(index==-1){
+						this.myData=[];
+					}else{
+						this.myData.splice(index,1);
+					}
+					
+				}
+			}
+		});
+	}
+</script>
+</head>
+<body>
+    <div id="box">
+		<form  role="form">
+			<legend>请输入信息</legend>
+		
+			<div class="form-group">
+				<label for="name">姓名</label>
+				<input type="text" class="form-control" id="name" placeholder="请输入姓名" v-model="infomation.name">
+			</div>
+			<div class="form-group">
+				<label for="age">年龄</label>
+				<input type="text" class="form-control" id="age" placeholder="请输入年龄" v-model="infomation.age">
+			</div>	
+			<button class="btn btn-primary" @click="add($event)">添加</button>
+			<button type="reset" class="btn btn-danger">重置</button>
+		</form>
+			<table class="table table-hover">
+				<legend>留言板</legend>
+				<thead>
+					<tr class="text-center">
+						<th class="text-center">序号</th>
+						<th class="text-center">姓名</th>
+						<th class="text-center">年龄</th>
+						<th class="text-center">
+							操作
+						</th>
+						
+					</tr>
+				</thead>
+				<tbody>
+					<tr class="text-center" v-for="value in myData">
+						<td>{{$index+1}}</td>
+						<td>{{value.name}}</td>
+						<td>{{value.age}}</td>
+						<td>
+							<button class="btn btn-primary" data-toggle="modal" data-target="#myModal" @click="change($index)">删除</button>
+						</td>
+					</tr>
+					<tr class="text-center" v-show="myData.length==0">
+						<td colspan="4">
+							没有数据。。。
+						</td>
+					</tr>
+					<tr class="text-center" v-show="myData.length!=0">
+						<td colspan="4">
+							<button class="btn btn-danger" data-toggle="modal" data-target="#myModal" @click="nowIndex=-1" >删除全部</button>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		<!-- 模态框（Modal） -->
+		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+		<div class="modal-content">
+		<div class="modal-header">
+		<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+		<h4 class="modal-title" id="myModalLabel">确定？</h4>
+		</div>
+		<div class="modal-body">确定要删除么？</div>
+		<div class="modal-footer">
+		<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+		<button type="button" class="btn btn-primary" data-dismiss="modal" @click="del(nowIndex)">确定</button>
+		</div>
+		</div><!-- /.modal-content -->
+		</div><!-- /.modal -->
+		</div>
+    </div>
+</body>
+</html>
