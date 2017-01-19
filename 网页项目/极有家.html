@@ -1,0 +1,46 @@
+<!DOCTYPE>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<link rel="stylesheet" type="text/css" href="./css/variable.css">
+		<link rel="stylesheet" type="text/css" href="./lib/reset.css">
+	</head>
+	<body>
+		<div class="nav">
+			<div class="nav-in">
+				<div><a class="priceUp">价格升序</a></div>
+				<div><a class="priceDown">价格降序</a></div>
+				<div><a class="soldUp">交易量升序</a></div>
+				<div><a class="soldDown">交易量降序</a></div>
+				<div class="price-search">
+					<input type="text" placeholder="￥" class="from" onkeyup='this.value=this.value.replace(/\D/gi,"")'/>
+					<em>-</em>
+					<input type="text" placeholder="￥" class="to" onkeyup='this.value=this.value.replace(/\D/gi,"")'/>
+					<a class="sure">确定</a>
+				</div>
+				<div class="place"><a >所在地∨</a>
+					<ul>
+						<li><a class="jiangsu">江苏</a></li>
+						<li><a class="shanghai">上海</a></li>
+						<li><a class="guangxi">广西</a></li>
+						<li><a class="guangdong">广东</a></li>
+						<li><a class="shandong">山东</a></li>
+						<li><a class="zhejiang">浙江</a></li>
+						<li><a class="fujian">福建</a></li>
+					</ul>
+				</div>
+				<div class="chang">
+					<a class="before" ><</a>
+					<em class="number">1</em>
+					<em>/</em>
+					<em class="top">6</em>
+					<a class="next">></a>
+				</div>
+			</div>
+		</div>
+		<div class="inside">
+		</div>
+		<script src="./lib/jquery@2.2.4.js"></script>
+		<script src="./js/demo2.js"></script>
+	</body>
+</html>

@@ -1,0 +1,586 @@
+//function
+@import "../lib/reset.css"
+// getShadowWidth()
+// 	arguments[0]/argument[1]*10 arguments[0]+arguments[1]
+// //mixin	
+// setBcakgroundColor()
+// 	backrogund-color arguments[0]
+// .func
+// 	width 200px
+// 	height 40px
+// 	setBcakgroundColor red
+// 	border 2px solid
+// for num in 1 2 3
+// 	div:nth-of-type({num})
+// 		font-size (num*20)px
+// getBiggerFont()
+// 	font-size-scale = "1 2 3"
+// 	for num in font-size-scale
+body
+	.nav
+		position fixed
+		top 60px
+		z-index 10
+		right 10px
+		width 116px
+		padding-top 56px
+		line-height 1.5
+		font-size 12px
+		.nav-img
+			position absolute
+			left 0
+			top 0
+			height 120px
+			width 116px
+			background-image url(../img/nav-img.png)
+		.nav-list
+			width 116px
+			border-radius 60px 60px 0 0 
+			padding 65px 10px 0
+			background-color rgb(136,57,242)
+			>ul 
+				li
+					border-bottom 1px solid rgb(149,80,123)
+					text-align center
+					padding 6px 0
+					a
+						color white
+						padding 6px 0
+						font-size 14px
+						line-height 20px
+						text-align center
+						&:hover
+							color rgb(244,239,81)
+						&.change
+							color rgb(244,239,81)
+		.nav-footer
+			overflow hidden
+			height 52px
+			width 116px
+			>a
+				display block
+				width 116px
+				padding-top 64px
+				margin-top -68px
+				line-height 52px
+				border-radius 50%
+				background-color rgb(121,57,207)	
+				color white
+				text-align center
+				span
+					font-size 20px
+					font-weight bold
+					color white
+					display inline-block
+					line-height 52px
+					text-align center	
+				i
+					height 0
+					width 0
+					overflow hidden
+					border-bottom 8px solid white
+					border-left 6px dashed transparent
+					border-right 6px dashed transparent
+					margin-left 5px
+					margin-top -10px
+					display inline-block
+					vertical-align middle
+	.top
+		height 60px
+		width 1920px
+		background-color rgb(36,36,36)
+		.topOut
+			width 980px
+			height 60px
+			margin 0 auto
+			.contury
+				width 70px
+				height 60px
+				float left
+				background-image url(../img/chufa.png)
+			.topu
+				width 910px
+				height 60px
+				float right
+				li
+					width 74px
+					height 30px
+					float left
+					padding 0 3px
+					text-align center
+					margin 15px 3px
+					&:nth-of-type(8)
+						a
+							background-color rgb(254,230,72)
+							border 2px solid rgb(254,230,72)
+							color rgb(36,36,36)
+							font-weight 700
+							&:hover
+								color rgb(36,36,36)
+								border 2px solid rgb(254,230,72)
+					a
+						color white
+						line-height 26px
+						border 2px solid white
+						display inline-block
+						height 30px
+						width 74px
+						border-radius 35px
+						&:hover
+							color rgb(254,230,72)
+							border 2px solid rgb(254,230,72)
+	.banner
+		width 1920px
+		height 	581px
+		position relative
+		background-color rgb(61,172,103)		
+		.upImg
+			width 1920px
+			height 460px
+			image 
+				float left
+		.downText
+			width 	980px
+			height 266px	
+			position absolute
+			left 50%
+			transform translateX(-50%)
+			top 315px
+			.box-hd
+				height 93px
+				width 980px
+				a
+					width 234px
+					background-color rgb(250,233,11)
+					height 56px
+					color rgb(231,21,58)
+					border-color rgb(30,28,111)
+					border-style solid
+					border-width 2px 2px 4px 2px 
+					border-radius 20px
+					display block
+					font-size 30px
+					text-align center
+					line-height 50px
+					font-weight bold
+					margin 0 auto
+					span
+						font-weight bold
+			.box-bd
+				height 173px
+				width 1000px
+				padding 30px 0 20px
+				div 
+					float left
+					width 188px
+					height 123px
+					margin-right 10px
+					background-repeat no-repeat
+					background-position 50% 50%
+					a
+						width 188px
+						height 111px
+						padding 12px 10px 0
+						display block
+						span
+							&:nth-of-type(1)
+								display block
+								color white
+								line-height 28px
+								font-size 24px
+								font-weight bold
+							&:nth-of-type(2)
+								display block
+								color white
+								line-height 28px
+								font-size 14px
+								
+				.item-01
+					background-image url(../img/q1.jpg)
+				.item-02
+					background-image url(../img/q2.jpg)
+				.item-03
+					background-image url(../img/q3.jpg)
+				.item-04
+					background-image url(../img/q4.jpg)
+				.item-05
+					background-image url(../img/q5.jpg)
+	.part
+		width 1920px
+		background rgb(129,90,216)	
+		padding-bottom 40px	
+		.part-box
+			width 980px
+			margin 0 auto
+			padding-top 60px
+			.title
+				width 980px
+				height 93px	
+				font-size 30px
+				font-weight bold
+				background-image url(../img/t1.jpg)
+				.title1
+					width 980px
+					text-align center
+					color white
+					padding-top 10px
+					font-weight bold
+				.title2
+					width 980px
+					text-align center
+					font-size 16px
+					color rgb(255,238,0)
+					margin-top 6px
+					font-weight bold
+			.inside
+				.inside-footer
+					padding 16px 0 36px
+					position relative
+					text-align center	
+					width 980px
+					height 87px
+					i
+						position absolute
+						top 32px
+						width 412px
+						height 1px
+						background-color rgba(0,0,0,0.5)
+						&:nth-of-type(1)
+							left 12px
+						&:nth-of-type(2)
+							right 12px
+					a
+						display block
+						width 132px
+						margin 0 auto
+						line-height 34px
+						background-color rgba(0,0,0,0.5);
+						border-radius 17px
+						color white
+				.inside-top
+					.slidetop1
+						width 980px
+						position fixed
+						top -10px
+						left 468px
+						z-index 12
+					.inside-top1
+						height 62px
+						padding 10px 11px 0 11px
+						a
+							display block
+							width 479px
+							height 52px
+							line-height 52px
+							text-align center
+							font-size 18px
+							font-weight bold
+							&.a1
+								float left
+								border 1px solid rgb(79,30,189)
+								color rgb(255,238,0)
+								background-color rgb(79,30,189)
+								border-radius 8px 0 0 8px
+							&.a1.a11
+								color rgb(79,30,189)
+								background-color rgb(147,105,240)
+							&.a2
+								float right
+								border 1px solid rgb(79,30,189)
+								color rgb(79,30,189)
+								background-color rgb(147,105,240)
+								border-radius  0 8px 8px 0
+							&.a2.a21
+								color rgb(255,238,0)
+								background-color rgb(79,30,189)
+							&:hover
+								color rgb(255,238,0)
+								background-color rgb(79,30,189)
+					.inside1
+						height 1159px
+						width 980px
+						padding-top 5px
+						padding-bottom 10px
+						>div
+							float left
+							height 286
+							padding 10px
+							width 244px
+							position relative
+							>a
+								display block
+								width 224px
+								height 266px
+								img
+									width 224px
+									height 150px
+									transition  2s
+								&:hover img
+									width 240px
+									height 170px
+			
+								>div:nth-of-type(1)
+									width 224px
+									height 149px
+									overflow hidden
+									.jianjia
+										width 68px
+										height 68px
+										border-radius 34px
+										background-color rgb(242,62,79)											
+										position absolute
+										text-align center
+										padding 14px 0
+										right 20px
+										top 20px	
+										z-index 2
+										span
+											line-height 20px
+											font-size 14px
+											font-weight bold
+											&:nth-of-type(1)
+												color white
+											&:nth-of-type(2)
+												color rgb(255,240,110)
+										
+									
+								>div:nth-of-type(2)
+									width 224px
+									height 117px
+									overflow hidden
+									background-color white
+									padding 10px
+									>div:nth-of-type(1)
+										font-size 16px
+										font-weight bold
+										height 24px
+										line-height 24px
+										color rgb(51,51,51)
+										overflow hidden
+										white-space nowrap
+										text-overflow ellipsis
+									>div:nth-of-type(2)
+										font-size 14px
+										color rgb(51,51,51)
+										overflow hidden
+										height 21px
+										line-height 21px
+										white-space nowrap
+										text-overflow ellipsis
+									>div:nth-of-type(3)	
+										position relative
+										font-size 14px
+										height 24px
+										color rgb(255,57,57)
+										>div
+											&:nth-of-type(1)
+												margin-top 10px
+												>i
+													font-size 16px
+													display inline
+												>span:nth-of-type(1)
+													font-size 24px
+											&:nth-of-type(2)
+												padding-top 2px
+												color rgb(102,102,102)
+												text-decoration line-through
+												font-size 14px
+											&:nth-of-type(3)
+												background-color rgb(230,24,24)
+												color rgb(255,222,0)
+												position absolute
+												right 0
+												width 80px
+												line-height 40px
+												text-align center
+												font-size 16px
+												border-radius 5px
+												top 0px
+			&.part1-box3
+				.title
+					background-image url(../img/t2.jpg)	
+					.title1
+						padding-top 20px			
+				.inside
+					height 1600px
+					background-color rgb(226,184,0)
+					.inside-top
+						.inside-top1
+							a
+								&.a6
+									border 1px solid rgb(161,106,8)
+									color rgb(255,238,0)
+									background-color rgb(155,128,11)
+								&.a6.a61
+									color rgb(161,106,8)
+									background-color rgb(247,225,110)
+								&.a7
+									border 1px solid rgb(161,106,8)
+									color rgb(161,106,8)
+									background-color rgb(247,225,110)
+								&.a7.a71
+									color rgb(255,238,0)
+									background-color rgb(155,128,11)
+								&:hover
+									color rgb(255,238,0)
+									background-color rgb(155,128,11)
+						.inside1
+							height 1470px
+	.part2
+		width 1920px
+		background rgb(102,51,218)	
+		padding-bottom 40px	
+		.huiyuan
+			width 980px
+			height 530px
+			background-image url(../img/huiyuan.png)
+			margin 0 auto
+		.part-box
+			.inside1
+				.chanpin
+					&:hover .erwei
+						display block
+					&:hover .erweima
+						display block
+					.erwei
+						width 224px
+						height 150px
+						position absolute
+						top 10px
+						left 10px
+						display none	
+						z-index 11	
+						.tu 
+							display inline-block
+							height 100px 
+							width 100px 
+							position absolute
+							background-image url(../img/erwei.png)
+							background-size cover
+							top 10px 
+							left 50%
+							transform translateX(-50%)
+						.zi 
+							display inline-block
+							color rgb(255,238,0)
+							font-size 14px
+							font-weight bold
+							opacity 1
+							position absolute
+							top 120px
+							left 50%
+							transform translateX(-50%)
+							width 200px
+							text-align center
+					.erweima
+						width 224px
+						height 150px
+						position absolute
+						top 10px
+						left 10px
+						display none	
+						background-color black
+						opacity 0.5	
+						z-index 10	
+			&.part2-box1
+				background-color rgb(102,51,218)
+				.title
+					background-image url(../img/t3.jpg)	
+					.title1
+						padding-top 20px	
+				.inside
+					background-color rgb(238,154,80)
+					.inside-top
+						.inside-top1
+							a
+								&.a8
+									border 1px solid rgb(231,96,38)
+									color rgb(255,238,0)
+									background-color rgb(231,96,38)
+								&.a8.a81
+									color rgb(231,96,38)
+									background-color rgb(254,194,124)
+								&.a9
+									border 1px solid rgb(231,96,38)
+									color rgb(231,96,38)
+									background-color rgb(254,194,124)
+								&.a9.a91
+									color rgb(255,238,0)
+									background-color rgb(231,96,38)
+								&:hover
+									color rgb(255,238,0)
+									background-color rgb(231,96,38)
+						.inside1
+							height 1731px
+			&.part2-box2
+				.title
+					background-image url(../img/t4.jpg)	
+					.title1
+						padding-top 20px	
+				.inside
+					background-color rgb(70,119,206)
+					.inside-top
+						.inside1
+							height 587px
+			&.part2-box3
+				.title
+					background-image url(../img/t5.jpg)	
+					.title1
+						padding-top 20px	
+				.inside
+					background-color rgb(70,119,206)
+					.inside-top
+						.inside-top1
+							height 62px
+							padding 10px 10px 0 10px  
+							a
+								width 320px
+								&.a3
+									float left
+									border 1px solid rgb(19,69,155)
+									color rgb(244,229,19)
+									background-color rgb(19,69,155)
+									border-radius 8px 0 0 8px
+								&.a3.a31
+									color rgb(19,69,155)
+									background-color rgb(123,189,247)
+								&.a4
+									float left
+									border 1px solid rgb(79,30,189)
+									color rgb(19,69,155)
+									background-color rgb(123,189,247)
+									border-radius  0 0 0 0 
+								&.a4.a41
+									color rgb(244,229,19)
+									background-color rgb(19,69,155)
+								&.a5
+									float right
+									border 1px solid rgb(79,30,189)
+									color rgb(19,69,155)
+									background-color rgb(123,189,247)
+									border-radius  0 8px 8px 0
+								&.a5.a51
+									color rgb(244,229,19)
+									background-color rgb(19,69,155)
+								&:hover
+									color rgb(244,229,19)
+									background-color rgb(19,69,155)
+						.inside1
+							height 2890px
+	.part3
+		width 1920px
+		height 220px
+		background-color rgb(61,172,103)	
+		>a
+			display block
+			height 220px
+			width 980px
+			margin 0 auto
+			background-image url(../img/dibu1.png)					
+	.part4
+		width 1920px
+		height 150px
+		background-image url(../img/dibu2.png)
+		background-position 50% 50%	
+		background-repeat no-repeat					
+					

@@ -1,0 +1,119 @@
+
+.banner.tab a.current{
+	z-index:1;
+}
+.banner.fade a:not(.current){
+	display:none;
+}
+.banner.slide a:not(.current){
+	left:540px;
+}
+.banner a{
+	position:absolute;
+	top:0;
+	left:0;
+	display:block;
+	width:100%;
+	height:100%;
+	background-color:rgb(255, 255, 255);
+	background-repeat:no-repeat;
+/*	background-position:50% 50%;
+	background-size:contain;*/
+}
+.banner .indicator{
+	position:absolute;
+	text-align:center;
+	z-index:1;
+	left: 50% ;
+	transform:translateX(-50%);
+}
+.banner .indicator:not(.theme4){
+	bottom:24px;
+}
+.banner .indicator em{
+	cursor:pointer;
+}
+.banner .indicator:not(.theme4) em{
+	display:inline-block;
+}
+/*theme1*/
+.banner .indicator.theme1 em{
+	margin-right:4px;
+	width:20px;
+	height:20px;
+	background-color:rgb(0, 128, 255);
+	border:1px solid rgb(255, 255, 255);
+	font-size:12px;
+	line-height:18px;
+	color:rgb(255, 255, 255);
+	text-align:center;
+}
+.banner .indicator.theme1 em.current{
+	background-color:rgb(255, 128, 0);
+}
+/*theme2*/
+.banner .indicator.theme2 em{
+	margin-right:6px;
+	width:12px;
+	height:12px;
+	background-color:rgb(255, 255, 255);
+	border:1px solid rgb(234, 234, 234);
+	border-radius:50%;
+}
+.banner .indicator.theme2 em.current{
+	background-color:rgb(0, 128, 255);
+}
+/*theme3*/
+.banner .indicator.theme3 em{
+	margin-right:6px;
+	width:30px;
+	height:8px;
+	background-color:rgb(255, 255, 255);
+	border:1px solid rgb(234, 234, 234);
+}
+.banner .indicator.theme3 em.current{
+	background-color:rgb(0, 128, 255);
+}
+/*theme4*/
+.banner .indicator.theme4{
+	bottom:0;
+	display:flex;
+}
+/*theme5*/
+.banner .indicator.theme5 em{
+	margin-right:6px;
+	width:12px;
+	height:12px;
+	background-color:rgb(255, 255, 255);
+	border:1px solid rgb(234, 234, 234);
+	border-radius:50%;
+}
+/*theme5*/
+.banner .indicator.theme5{
+	background-color: rgb(0,0,0);
+	text-align: center;
+	padding: 1px 2px;
+	margin: 1px 2px ;
+}
+.banner .indicator.theme5 em.current{
+	background-color:rgb(0, 128, 255);
+}
+.banner .indicator.theme4 em{
+	flex:1;
+	height:8px;
+	background-color:rgb(255, 255, 255);
+	border-style:solid;
+	border-color:rgb(234, 234, 234);
+}
+.banner .indicator.theme4 em:first-of-type{
+	border-width:1px 1px 0 0;
+}
+.banner .indicator.theme4 em:last-of-type{
+	border-width:1px 0 0 0;
+}
+.banner .indicator.theme4 em:not(:first-of-type):not(:last-of-type){
+	border-width:1px 1px 0 0;
+}
+.banner .indicator.theme4 em.current{
+	background-color:rgb(0, 128, 255);
+}
